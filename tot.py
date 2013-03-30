@@ -1,3 +1,4 @@
+#coding=utf-8
 import bottle
 from bottle import HTTPError
 from bottle.ext import sqlalchemy
@@ -30,6 +31,9 @@ class Entity(Base):
     def __repr__(self):
         return "<Entity('%d', '%s')>" % (self.id, self.name)
 
+@app.get('/')
+def index():
+    return "hello bottle2"
 
 @app.get('/:name')
 def show(name, db):
