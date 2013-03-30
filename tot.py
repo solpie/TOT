@@ -33,7 +33,7 @@ class Entity(Base):
 
 @app.get('/')
 def index():
-    return "hello bottle2"
+    return "hello bottle3"
 
 @app.get('/:name')
 def show(name, db):
